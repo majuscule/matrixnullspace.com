@@ -1,13 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-
+<!DOCTYPE HTML>
 <html>
 <head>
-  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta charset="utf-8">
+  <title>matrixnullspace</title>
+  <link rel="stylesheet" href="/style.css">
   <script type='text/javascript' src='/jquery.js'></script>
   <script type='text/javascript' src='/validate.js'></script>
-  <title>matrixnullspace</title>
-<html>
+</head>
 <body>
 
 <pre>
@@ -20,7 +19,6 @@ example:
 2 3 5
 -4 2 3
 0 0 0
-
 </pre>
 
 <br>
