@@ -6,14 +6,8 @@
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
   <script type='text/javascript' src='/jquery.js'></script>
   <script type='text/javascript' src='/validate.js'></script>
-
   <title>matrixnullspace</title>
 <html>
-
-<head>
-  <title>solidofrevolution</title>
-</head>
-
 <body>
 
 <pre>
@@ -33,14 +27,14 @@ example:
 
 <form id="calulator" action="calculate" method="post" > 
   <textarea id="matrix" name="matrix" rows="15" cols="40"></textarea>
-  <br> <br>
+  <br><br>
   <input type="submit" value="./calculate" id="submit" />
 </form> 
 
 </body>
 
 <br>
-<h2><a href="http://dylansserver.com">dylansserver.com</a>, <a href="mailto:dylan@psu.edu">dylan@psu.edu</a>
+<h2>written by dylan@<a href="http://dylansserver.com">dylansserver.com</a>
 </h2>
 
 </html>
