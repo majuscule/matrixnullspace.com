@@ -23,4 +23,47 @@
 body {
     background-image: url('/images/gray_jean.png');
     font-family: 'InconsolataMedium';
+    margin: 20px 20px 30px 20px;
+}
+
+#container {
+    margin: auto;
+    width: 960px;
+}
+
+form {
+    float: left;
+}
+
+textarea {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 30px;
+    color: grey;
+    font-style: italic;
+}
+
+#results {
+    float: left;
+    margin: 0px 0px 0px 20px;
+}
+
+#results li {
+    font-weight: bold;
+}
+
+#results li :not(child) {
+    font-weight: normal;
+}
+
+#fail {
+    color: red;
+}
+
+#clear {
+    clear: both;
+}
+
+#footer {
+    width: 100%;
 }

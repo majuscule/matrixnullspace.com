@@ -1,4 +1,5 @@
 import urlparse
+import json
 
 import scipy
 import scipy.linalg
@@ -17,10 +18,6 @@ def eigenvalues(A, eps=1e-15):
 def application(environ, start_response):
     if environ['REQUEST_METHOD'] == 'POST':
         post_data = environ['wsgi.input'].read()
-
-	output = "<pre>"
-	#output += post_data
-	output += "<br>"
 
 	post_data = urlparse.parse_qsl(post_data, True, True)
 
@@ -42,25 +39,13 @@ def application(environ, start_response):
 #            output += str(l)
         determinant = scipy.linalg.det(given_matrix)
 
-	output += "<h1>"
-	output += "nullspace:<br>"
-	output += str(null_space)
-	output += "<br><br>"
-	output += "eigenvalues:<br>"
-	output += str(eigenvalues(given_matrix))
-	output += "<br><br>"
-	output += "determinant:<br>"
-	output += str(determinant)
-#	output += "<br><br>"
-#	output += "eigenvalues:<br>"
-#	output += str(l1)
-#	output += "<br><br>"
-#	output += "eigenvectors:<br>"
-#	output +=  str(v[:,0][0])
-	output += "</h1>"
+    output = json.dumps({
+        'nullspace' : str(null_space),
+        'eigenvalues' : str(eigenvalues(given_matrix)),
+        'determinant' : str(determinant)
+        })
 
-    # send results
     output_len = sum(len(line) for line in output)
-    start_response('200 OK', [('Content-type', 'text/html'),
+    start_response('200 OK', [('Content-type', 'application/json'),
                               ('Content-Length', str(output_len))])
     return output

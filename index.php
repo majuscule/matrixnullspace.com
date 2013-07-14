@@ -1,38 +1,32 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <title>matrixnullspace</title>
-  <link rel="stylesheet" href="/style.css">
-  <script type='text/javascript' src='/jquery.js'></script>
-  <script type='text/javascript' src='/validate.js'></script>
+  <link rel='stylesheet' href='/style.css'>
+  <script type='text/javascript' src='/js/jquery.js'></script>
+  <script type='text/javascript' src='/js/matrix.js'></script>
 </head>
 <body>
+  <div id='container'>
 
-<pre>
-usage: matrix.py
+  <h1>matrix.py</h1>
+  Find the kernel, determinant and eigenvalues of a given matrix.
 
-Find the kernel, determinant and eigenvalues of the given matrix.
-
-example:
-
-2 3 5
+  <form>
+      <textarea id="matrix">2 3 5
 -4 2 3
-0 0 0
-</pre>
+0 0 0</textarea></br>
+      <a id='submit' href='#'>./calculate</a>
+  </form>
 
-<br>
+  <ul id='results'></ul>
 
-<form id="calulator" action="calculate" method="post" > 
-  <textarea id="matrix" name="matrix" rows="15" cols="40"></textarea>
-  <br><br>
-  <input type="submit" value="./calculate" id="submit" />
-</form> 
+  <div id='clear'></div>
 
+  <div id="footer">
+      <h2><a href="http://dylansserver.com">dylansserver.com</a>
+  </div>
+</div>
 </body>
-
-<br>
-<h2>written by dylan@<a href="http://dylansserver.com">dylansserver.com</a>
-</h2>
-
 </html>
