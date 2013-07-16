@@ -13,7 +13,7 @@ $(document).ready(function(){
         });
         return;
     }
-    $.post('/calculate', { 'matrix' : $('#matrix').val() })
+    $.get('/calculate', { 'matrix' : $('#matrix').val() })
         .done(function(data) {
             $('#results').fadeOut('slow', function() {
                 $('#results').html('').append(
